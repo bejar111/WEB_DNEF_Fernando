@@ -134,7 +134,7 @@
 									</div>				
 								</div>
 							</div>
-							<div class="col-md-9">
+							<div class="col-md-9" ng-app="appXX" ng-controller="recursosXX">
 								<div class="dnef-titulo-bloque">Perfil Electoral</div>
 								<p class="mb-30">El Voluntariado juvenil del Jurado Nacional de Elecciones (JNE) es un espacio organizado de formación ciudadana y de promoción de valores y prácticas cívicas, donde las y los jóvenes contribuyen al fortalecimiento de la democracia a través de acciones educativas y de sensibilización dirigidas a la ciudadanía.</p>
 								<div class="content-filtros-datos">
@@ -144,7 +144,8 @@
 											<div class="form-row">
 												
 												<div class="form-group col-lg-10">										
-			                         				<input id="txtBuscarTitulo" type="text" name="" class="form-control" placeholder="Ingrese un titulo" maxlength="">				
+			                         				<!-- <input id="txtBuscarTitulo" type="text" name="" class="form-control" placeholder="Ingrese un titulo" maxlength="">	 -->
+													 <input type="text" class="form-control" placeholder="Ingrese un titulo" ng-model="filterText">	
 												</div>
 												<div class="form-group col-lg-2">
 													<button ng-click="setPage(2)"  class="btn-principal dnef-btn-block"><span class="icon-lupa"></span>  Buscar</button>
@@ -155,8 +156,10 @@
 									</div>									
 								</div>
 								
-								<div ng-app="appXX" ng-controller="recursosXX">
-									<input type="text" class="form-control" placeholder="Filter..." ng-model="filterText">
+							
+								<!-- <div ng-app="appXX" ng-controller="recursosXX"> -->
+									<div >
+									<!-- <input type="text" class="form-control" placeholder="Ingrese un titulo" ng-model="filterText">	 -->
 
 									<div class="row">										
 										<!-- <div class="col-md-4 mb-20" ng-repeat="item in items"> -->
