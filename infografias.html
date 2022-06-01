@@ -146,7 +146,7 @@
 												<div class="form-row">
 													
 													<div class="form-group col-lg-10">										
-				                         				<input id="" type="text" name="" class="form-control" placeholder="Ingrese un titulo" maxlength="">				
+				                         				<input id="" type="text" name="" class="form-control" placeholder="Ingrese un titulo" maxlength=""  ng-model="filterText">				
 													</div>
 													<div class="form-group col-lg-2">
 														<button class="btn-principal dnef-btn-block"><span class="icon-lupa"></span>  Buscar</button>
@@ -156,8 +156,10 @@
 											</div>							
 										</div>									
 									</div>
+									
 									<div class="row">
-										<div class="col-md-4 mb-20" ng-repeat="item in items">
+										<!-- <div class="col-md-4 mb-20" ng-repeat="item in items"> -->
+										<div class="col-md-4 mb-20" ng-repeat="item in items = (normas | filter : {titulo: filterText}) ">													
 											<div class="item-investigacion">
 												<div class="img-item-investigacion"><img src="{{item.imagen}}" class="mw100"></div>
 												<div class="titulo-item-investigacion">{{item.titulo}}</div>
@@ -170,7 +172,8 @@
 											</div>
 										</div>		
 									</div>
-									<div class="row">
+
+									<div class="row" style="display: none">
 										<div class="col-md-12 text-center" ng-if="!searchtxt" style="background-color:#ffffff;">
 											<nav aria-label="Page navigation">
 												<ul class="pagination mt-30 justify-content-center" ng-if="pager.pages.length">
@@ -204,7 +207,7 @@
 
 	<footer class="dnef-footer">
 		<div class="container container--footer">
-			<div>Av.Nicolás de Piérola #1070 - Lima  / Central: (511) 311 - 1700</div>
+			<div>Jr. Nazca #598 - Jesus María - Lima  / Central: (511) 311 - 1700</div>
 			<div>© JNE. Todos los Derechos Reservados 2022</div>
 		</div>
 	</footer>

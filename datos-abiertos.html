@@ -15,7 +15,8 @@
 	<script src="js/bootstrap.min.js"></script>
 	<script src="js/slick.js"></script>
 	<script src="js/main.js"></script>
-
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+	<script src="js/datos-abiertos.js"> </script>	
 </head>
 
 <body>
@@ -77,7 +78,7 @@
 			<!-- BUSCADOR-->
 	<div class="dnef-content-secciones">
 		<div class="container">
-			<div class="row">
+			<div class="row" ng-app="appXX" ng-controller="recursosXX">
 				<!-- FILTROS-->
 				<div class="col-lg-3">
 					<div class="content-general-filtro">
@@ -178,68 +179,50 @@
 								<div class="form-row">
 									
 									<div class="form-group col-lg-10">										
-                         				<input id="" type="text" name="" class="form-control" placeholder="Ingrese un titulo" maxlength="">				
+                         				<input id="" type="text" name="" class="form-control" placeholder="Ingrese un titulo" maxlength="" ng-model="filterText">				
 									</div>
-									<div class="form-group col-lg-2">
+									<div class="form-group col-lg-2" style="display: none">
 										<button class="btn-principal dnef-btn-block"><span class="icon-lupa"></span>  Buscar</button>
 									</div>
 									
 								</div>
 							</div>							
+						</div>						
+					</div>
+								
+
+					<!-- <div class="content-resultado-busqueda" > -->
+					<div class="content-resultado-busqueda" >
+						<!-- DETALLE DATO BUSQUEDA-->
+						<div class="dnef-bloque-libro" ng-repeat="item in items = (normas | filter : {titulo: filterText}) ">
+							<div class="dnef-tituto-dato">{{item.titulo}}</div>
+							<!-- <div class="dnef-categoria-dato">Economía y finanzas - COVID 19 - Desarrollo social - Gobernabilidad</div> -->
+							<div class="dnef-categoria-dato">{{item.categoria}} - COVID 19 - Desarrollo social - Gobernabilidad</div>
+							<p>
+								{{item.descripcion}}
+							</p>
+							<div class="dnef-content-descargar-datos">
+								<div class="fw-500" style="margin-bottom: 15px;">Descargar:</div>
+								<div class="dnef-justify-space">
+									<div class="dnef-tipo-archivo">
+										<!-- <a class="btn-descargar-archivo archivo-xls">RAR</a> -->
+										<a href="{{item.descarga}}" target="_blank" class="btn-principal">
+											Descargar
+										</a>										
+									</div>
+									<div class="dnef-content-redes" style="margin-top: 5px">
+										<span class="fw-500" style="margin-right: 10px">Compartir:</span>
+										<a class="btn-compartir-redes"><span class="icon-whats"></span></a>
+										<a class="btn-compartir-redes compartir-twitter"><span class="icon-twitter"></span></a>
+										<a class="btn-compartir-redes compartir-facebook"><span class="icon-facebook"></span></a> 
+									</div>
+								</div>										
+							</div>
 						</div>
 						
-					</div>
-					<div class="content-resultado-busqueda">
+				
 						<!-- DETALLE DATO BUSQUEDA-->
-						<div class="dnef-bloque-libro">
-							<div class="dnef-tituto-dato">Ejecución Presupuestal - COVID 19 - [Ministerio de Economía y Finanzas - MEF]</div>
-							<div class="dnef-categoria-dato">Economía y finanzas - COVID 19 - Desarrollo social - Gobernabilidad</div>
-							<p>
-								El conjunto de datos publicados corresponde a un subconjunto de datos de consulta amigable de gasto disponible en el portal de Transparencia Económica del MEF y contiene la información del Presupuesto institucional modificado...
-							</p>
-							<div class="dnef-content-descargar-datos">
-								<div class="fw-500" style="margin-bottom: 15px;">Descargar:</div>
-								<div class="dnef-justify-space">
-									<div class="dnef-tipo-archivo">
-										<a class="btn-descargar-archivo archivo-pdf">PDF</a>
-										<a class="btn-descargar-archivo archivo-xls">XLS</a>
-										<a class="btn-descargar-archivo archivo-doc">DOC</a>
-										<a class="btn-descargar-archivo archivo-ppt">PPT</a>
-									</div>
-									<div class="dnef-content-redes" style="margin-top: 5px">
-										<span class="fw-500" style="margin-right: 10px">Compartir:</span>
-										<a class="btn-compartir-redes"><span class="icon-whats"></span></a>
-										<a class="btn-compartir-redes compartir-twitter"><span class="icon-twitter"></span></a>
-										<a class="btn-compartir-redes compartir-facebook"><span class="icon-facebook"></span></a> 
-									</div>
-								</div>										
-							</div>
-						</div>
-						<!-- DETALLE DATO BUSQUEDA-->
-						<div class="dnef-bloque-libro">
-							<div class="dnef-tituto-dato">Ejecución Presupuestal - COVID 19 - [Ministerio de Economía y Finanzas - MEF]</div>
-							<div class="dnef-categoria-dato">Economía y finanzas - COVID 19 - Desarrollo social - Gobernabilidad</div>
-							<p>
-								El conjunto de datos publicados corresponde a un subconjunto de datos de consulta amigable de gasto disponible en el portal de Transparencia Económica del MEF y contiene la información del Presupuesto institucional modificado...
-							</p>
-							<div class="dnef-content-descargar-datos">
-								<div class="fw-500" style="margin-bottom: 15px;">Descargar:</div>
-								<div class="dnef-justify-space">
-									<div class="dnef-tipo-archivo">
-										<a class="btn-descargar-archivo archivo-xls">XLS</a>
-										<a class="btn-descargar-archivo archivo-doc">DOC</a>
-									</div>
-									<div class="dnef-content-redes" style="margin-top: 5px">
-										<span class="fw-500" style="margin-right: 10px">Compartir:</span>
-										<a class="btn-compartir-redes"><span class="icon-whats"></span></a>
-										<a class="btn-compartir-redes compartir-twitter"><span class="icon-twitter"></span></a>
-										<a class="btn-compartir-redes compartir-facebook"><span class="icon-facebook"></span></a> 
-									</div>
-								</div>										
-							</div>
-						</div>
-						<!-- DETALLE DATO BUSQUEDA-->
-						<div class="dnef-bloque-libro">
+						<!-- <div class="dnef-bloque-libro">
 							<div class="dnef-tituto-dato">Ejecución Presupuestal - COVID 19 - [Ministerio de Economía y Finanzas - MEF]</div>
 							<div class="dnef-categoria-dato">Economía y finanzas - COVID 19 - Desarrollo social - Gobernabilidad</div>
 							<p>
@@ -260,8 +243,11 @@
 										<a class="btn-compartir-redes compartir-facebook"><span class="icon-facebook"></span></a> 
 									</div>
 								</div>										
-							</div>
+							</div> -->									
+												
 						</div>
+						
+						
 					</div>
 				</div>
 				
@@ -277,7 +263,7 @@
 
 	<footer class="dnef-footer">
 		<div class="container container--footer">
-			<div>Av.Nicolás de Piérola #1070 - Lima  / Central: (511) 311 - 1700</div>
+			<div>Jr. Nazca #598 - Jesus María - Lima  / Central: (511) 311 - 1700</div>
 			<div>© JNE. Todos los Derechos Reservados 2022</div>
 		</div>
 	</footer>

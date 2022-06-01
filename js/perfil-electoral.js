@@ -51,10 +51,18 @@ app.controller('recursosXX', ['$scope', 'PagerService', '$timeout', function ($s
 		{anio:2021, imagen:'images/pdf.png',titulo:'Perfil Electoral 10 - EG2021_Resultados preliminares_Encuesta a Candidaturas Congresales',descarga:'documentos/investigacion/perfil-electoral/Perfil Electoral 10 - EG2021_Resultados preliminares_Encuesta a Candidaturas Congresales.pdf'},
 		{anio:2021, imagen:'images/pdf.png',titulo:'Perfil Electoral 11 - EG2021_Resultados primera vuelta electoral',descarga:'documentos/investigacion/perfil-electoral/Perfil Electoral 11 - EG2021_Resultados primera vuelta electoral.pdf'},
 		{anio:2021, imagen:'images/pdf.png',titulo:'Perfil Electoral 12 - EG2021_Monitoreo de medios en primera vuelta',descarga:'documentos/investigacion/perfil-electoral/Perfil Electoral 12 - EG2021_Monitoreo de medios en primera vuelta.pdf'},
-		{anio:2023, imagen:'images/pdf.png',titulo:'Perfil Electoral 13 - EG2023_Análisis de resultados_Segunda vuelta',descarga:'documentos/investigacion/perfil-electoral/Perfil Electoral 13 - EG2021_Análisis de resultados_Segunda vuelta.pdf'},
+		{anio:2023, imagen:'images/pdf.png',titulo:'Perfil Electoral 13 - EG2_Análisis de resultados_Segunda vuelta',descarga:'documentos/investigacion/perfil-electoral/Perfil Electoral 13 - EG2021_Análisis de resultados_Segunda vuelta.pdf'},
 	];
 
-
+	// $scope.searchText = function(item) {
+	// 	if (!$scope.query 
+	// 		|| (item.titulo.indexOf($scope.query) != -1) 
+	// 		// || (item.model.toLowerCase().indexOf($scope.query.toLowerCase()) != -1) 
+	// 		){
+	// 		return true;
+	// 	}
+	// 	return false;
+	// };
 
 	$scope.pager = {};
 	$scope.items = [];
