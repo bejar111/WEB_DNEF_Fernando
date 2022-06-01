@@ -147,7 +147,7 @@
 			                         				<input id="txtBuscarTitulo" type="text" name="" class="form-control" placeholder="Ingrese un titulo" maxlength="">				
 												</div>
 												<div class="form-group col-lg-2">
-													<button ng-click="setPage(2)"  class="btn-principal dnef-btn-block"><span class="icon-lupa"></span>  Buscar</button>
+													<button ng-click="setPage(1)"  class="btn-principal dnef-btn-block"><span class="icon-lupa"></span>  Buscar</button>
 												</div>
 												
 											</div>
@@ -156,13 +156,8 @@
 								</div>
 								
 								<div ng-app="appXX" ng-controller="recursosXX">
-									<input type="text" class="form-control" placeholder="Filter..." ng-model="filterText">
-
 									<div class="row">										
-										<!-- <div class="col-md-4 mb-20" ng-repeat="item in items"> -->
-										<div class="col-md-4 mb-20" ng-repeat="item in items = (normas | filter : {titulo: filterText}) ">
-										<!-- <div class="col-md-4 mb-20" ng-repeat="item in items = (normas | filter : {itemName: filterText}) | limitTo:3:3*(page-1)"> -->
-																<!-- <li ng-repeat="item in filterData = (totalItems | filter : {itemName: filterText}) | limitTo:3:3*(page-1)"> -->
+										<div class="col-md-4 mb-20" ng-repeat="item in items">
 											<div class="item-investigacion">
 												<div class="img-item-investigacion"><img src="{{item.imagen}}" class="mw100"></div>
 												<div class="titulo-item-investigacion">{{item.titulo}}</div>
@@ -177,9 +172,6 @@
 												
 									</div>
 								
-									<!-- <uib-pagination class="pagination-sm pagination" total-items="items.length" ng-model="page"
-									ng-change="pageChanged()" previous-text="&lsaquo;" next-text="&rsaquo;" items-per-page=3></uib-pagination> -->
-
 									<div class="row">
 										<div class="col-md-12 text-center" ng-if="!searchtxt" style="background-color:#ffffff;">
 											<nav aria-label="Page navigation">
@@ -199,8 +191,6 @@
 										</div>
 									</div>
 								</div>
-
-
 							</div>
 							
 						</div>
