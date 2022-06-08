@@ -61,6 +61,7 @@
     }
     .dnef-titulo-bloque{
         margin-top: 30px;
+        float: none !important;
     }
     .dnef-content-secciones.bg-dark{
         margin-top: 40px;

@@ -77,6 +77,9 @@ body .dnef-justify-space {
 body .text-red{
     color: #D8131B;
 }
+p{
+    text-align: justify;
+}
 .ir-enlace-self{
     cursor: pointer;
 }
@@ -402,6 +405,7 @@ body .text-red{
 }
 [class^="btn-"] + [class^="btn-"]{
     margin-left: 10px;
+    margin-bottom: 15px;
 }
 .dnef-content-servicios{
 	position: relative;
@@ -879,6 +883,7 @@ body .text-red{
     -ms-transition: width .3s linear;
     -webkit-transition: width .3s linear;
     width: 52px;
+    display: none;
 }
 .content-video-max{
     background: #E62B42;
@@ -1032,6 +1037,27 @@ body .text-red{
     background-position: center center;
     background-size: cover;
 }
+.cd-content--ubicacion--nosotros{
+    background: #131313 url(../images/banner-interno-nosotros.png);
+    background-position: center center;
+    background-size: cover;
+}
+.cd-content--ubicacion--lineas{
+    background: #131313 url(../images/banner-interno-lineas.png);
+    background-position: center center;
+    background-size: cover;
+}
+.cd-content--ubicacion--novedades{
+    background: #131313 url(../images/banner-novedades.jpg);
+    background-position: center center;
+    background-size: cover;
+}
+.cd-content--ubicacion--jovenes{
+    background: #131313 url(../images/banner-jovenes.jpg);
+    background-position: center center;
+    background-size: cover;
+}
+
 .logo-enlace-info{
     overflow: hidden;
     width: auto;
@@ -1066,6 +1092,7 @@ body .text-red{
 .banner-inicio{
     background: url(../images/fondo-banner.jpg);
     background-size: cover;
+    padding: 6% 0;
 }
 .titulo-banner-inicio{
     font-weight: 600;
@@ -1080,9 +1107,9 @@ body .text-red{
     margin-top: 20px;
 }
 .texto-banner-inicio{
-    font-weight: 300;
     font-size: 18px;
     line-height: 30px;
+    text-align: justify;
 }
 
 /*FONDO POP UP**/
@@ -1215,7 +1242,7 @@ body .text-red{
 }
 .img-item-investigacion{
     text-align: center;
-    height: 150px;
+    height: 170px;
     overflow: hidden;
     display: flex;
     align-items: center;
@@ -1239,4 +1266,26 @@ body .text-red{
 .page-item.disabled .page-link {
     background-color: #f2f2f2;
     border-color: #dee2e6;
+}
+.dnef-redes-header{
+    display: none;
+}
+.btn-documento-descarga{
+
+    display: inline-block;
+    color: #333;
+    max-width: 166px;
+}
+.nombre-documento-descarga{
+    min-height: 66px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+.btn-documento-descarga img{
+    max-width: 100%;
+    /* width: 100%; */
+    margin: 0;
+    margin-bottom: 10px;
 }

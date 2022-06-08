@@ -1,3 +1,4 @@
+ var urlWEb_Dnef='https://dnef.jne.gob.pe';
  $( document ).ready(function() {
  	scrollBody();
 

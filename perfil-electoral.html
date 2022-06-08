@@ -24,7 +24,7 @@
 	<header>
 		<div class="dnef-top-header">
 			<div class="container container--header-top">
-				<div class="dnef-correo-header"><span class="icon-message"></span> correo@jne.gob.pe</div>
+				<div class="dnef-correo-header"><span class="icon-message"></span> dnef@jne.gob.pe</div>
 				<div class="dnef-redes-header">
 					<a href="#" class="item-redes-header"><span class="icon-facebook"></span></a>
 					<a href="#" class="item-redes-header"><span class="icon-twitter"></span></a>
@@ -42,13 +42,11 @@
 				<div class="dnef-content-servicios">
 					<div class="btn-servicios btn-principal btn-cyan">SERVICIOS DNEF <span class="icon-arrow-bottom" style="font-size:10px"></span></div>
 					<div class="content-logo-servicios">
-						<a class="item-logo-servicio" href="https://votoinformado.jne.gob.pe/voto" target="_blank"><img src="images/voto-informado.svg" class="imgservicio"></a>
-						<a class="item-logo-servicio" href="https://observaigualdad.jne.gob.pe/" target="_blank"><img src="images/observa.svg" class="imgservicio"></a>
-						<a class="item-logo-servicio" href="https://cedie.jne.gob.pe/" target="_blank"><img src="images/cedie.svg" class="imgservicio"></a>
-						<a class="item-logo-servicio" href="https://museoelectoral.jne.gob.pe/" target="_blank"><img src="images/museo.svg" class="imgservicio"></a>			
-						<a class="item-logo-servicio" href="https://educacionvirtual.jne.gob.pe/dnef/" target="_blank"><img src="images/aula.svg" class="imgservicio"></a>
-						<a style="display: none;" class="item-logo-servicio" href="#"><img src="images/repositorio.svg" class="imgservicio"></a>						
-						<a class="item-logo-servicio" href="datos-abiertos.html" target="_blank"><img src="images/datos.svg" class="imgservicio"></a>
+						<a class="item-logo-servicio" href="https://votoinformado.jne.gob.pe/voto" target="_blank"><img src="images/voto-informado.svg" class="imgservicio"></a>						
+						<a class="item-logo-servicio" href="https://observaigualdad.jne.gob.pe/" target="_blank"><img src="images/observa.svg" class="imgservicio"></a>	<a class="item-logo-servicio" href="https://cedie.jne.gob.pe/" target="_blank"><img src="images/cedie.svg" class="imgservicio"></a>
+						<a class="item-logo-servicio"  href="https://museoelectoral.jne.gob.pe/" target="_blank"><img src="images/museo.svg" class="imgservicio"></a>
+						<a class="item-logo-servicio" href="https://educacionvirtual.jne.gob.pe/dnef/" target="_blank"><img src="images/aula.svg" class="imgservicio"></a>						
+						<a class="item-logo-servicio" href="datos-abiertos.html" target="_blank"><img src="images/datos-app.svg" class="imgservicio"></a>
 						<a class="item-logo-servicio" href="https://saednef.jne.gob.pe/" target="_blank"><img src="images/sae.svg" class="imgservicio"></a>
 					</div>
 				</div>
@@ -61,7 +59,7 @@
 					<li class="dnef-item-menu"><a href="nosotros.html">NOSOTROS</a></li>
 					<li class="dnef-item-menu dnef-item-menu--active"><a href="lineas-trabajo.html">LÍNEAS DE TRABAJO</a></li>
 					<li class="dnef-item-menu"><a href="certificados.html">CERTIFICADOS</a></li>
-					<li class="dnef-item-menu"><a href="galeria.html">GALERÍA</a></li>
+					<li class="dnef-item-menu" style="display:none"><a href="galeria.html">GALERÍA</a></li>
 				</ul>
 				<div class="clearfix"></div>
 			</div>
@@ -84,14 +82,14 @@
 					<div class="titulo-tabs-seccion">Equipo de investigación</div>
 					<div class="tab-link--dnef ir-enlace-self" data-file="unidad-investigacion.html">Investigación</div>
 					<div class="tab-link--dnef ir-enlace-self" data-file="publicaciones.html">Publicaciones</div>
-					<div class="tab-link--dnef tab-active ir-enlace-self" data-file="perfil-electoral.html">Perfil electoral</div>
+					<div class="tab-link--dnef tab-active ir-enlace-self" data-file="perfil-electoral.html">Perfil Electoral</div>
 					<div class="tab-link--dnef ir-enlace-self" data-file="infografias.html">Infografías</div>			
 				</div>
 				<div class="content-info-tabs">
 					<!-- INFOT TABS 1-->
 					<div class="tab-content tab-active" >
 						<div class="row">
-							<div class="col-md-3">
+							<div id="idFiltroAnio" class="col-md-3" style="display:none">
 								<div class="content-general-filtro">
 									<div class="content-bloque-filtros bb-0">
 										<div class="titulo-bloque-filtros">Año de publicación</div>
@@ -134,20 +132,20 @@
 									</div>				
 								</div>
 							</div>
-							<div class="col-md-9" ng-app="appXX" ng-controller="recursosXX">
+							<div class="col-md-12" ng-app="appXX" ng-controller="recursosXX">
 								<div class="dnef-titulo-bloque">Perfil Electoral</div>
-								<p class="mb-30">El Voluntariado juvenil del Jurado Nacional de Elecciones (JNE) es un espacio organizado de formación ciudadana y de promoción de valores y prácticas cívicas, donde las y los jóvenes contribuyen al fortalecimiento de la democracia a través de acciones educativas y de sensibilización dirigidas a la ciudadanía.</p>
+								<p class="mb-30">El Perfil Electoral es un producto de la Dirección Nacional de Educación y Formación Cívica Ciudadana (DNEF) del Jurado Nacional de Elecciones, cuyo objetivo es analizar la información de los procesos electorales y la producción académica de la institución para su difusión y divulgación a la ciudadanía y medios de comunicación con el fin de incidir en el fortalecimiento del sistema político y la democracia.</p>
 								<div class="content-filtros-datos">
 									<div class="form-row">
 										<div class="form-group col-lg-12">
 											<label for="" class="">¿Qué buscas?</label>
 											<div class="form-row">
 												
-												<div class="form-group col-lg-10">										
+												<div class="form-group col-lg-12">										
 			                         				<!-- <input id="txtBuscarTitulo" type="text" name="" class="form-control" placeholder="Ingrese un titulo" maxlength="">	 -->
-													 <input type="text" class="form-control" placeholder="Ingrese un titulo o año de publicación" ng-model="filterText">	
+													 <input type="text" class="form-control" placeholder="Ingrese un titulo" ng-model="filterText">	
 												</div>
-												<div class="form-group col-lg-2">
+												<div class="form-group col-lg-2" style="display:none">
 													<button ng-click="setPage(2)"  class="btn-principal dnef-btn-block"><span class="icon-lupa"></span>  Buscar</button>
 												</div>
 												
@@ -170,7 +168,7 @@
 											<!-- <div class="col-md-4 mb-20" ng-repeat="item in items = (normas | filter : {titulo: 'congre' }) "> -->
 											<!-- <div class="col-md-4 mb-20" ng-repeat="item in items = (normas | filter : {titulo: filterText} || filter : {anio: filterText}  ) "> -->
 											<!-- <div class="col-md-4 mb-20" ng-repeat="item in items = (normas | filter : {titulo: filterText} |  filter :   {anio: filterText}  ) "> -->
-											<div class="col-md-4 mb-20" ng-repeat="item in items = (normas | filter : {titulo: filterText}) ">												
+											<div class="col-md-3 mb-20" ng-repeat="item in items = (normas | filter : {titulo: filterText}) ">												
 												<div class="item-investigacion">
 												<div class="img-item-investigacion"><img src="{{item.imagen}}" class="mw100"></div>
 												<div class="titulo-item-investigacion">{{item.titulo}}</div>
@@ -223,7 +221,7 @@
 
 	<footer class="dnef-footer">
 		<div class="container container--footer">
-			<div>Jr. Nazca #598 - Jesus María - Lima  / Central: (511) 311 - 1700</div>
+				<div>Jr. Nazca #598 - Jesus María - Lima  / Central: (511) 311 - 1700</div>
 			<div>© JNE. Todos los Derechos Reservados 2022</div>
 		</div>
 	</footer>

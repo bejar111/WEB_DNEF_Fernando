@@ -15,6 +15,7 @@
 	<script src="js/bootstrap.min.js"></script>
 	<script src="js/slick.js"></script>
 	<script src="js/main.js"></script>
+
 	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
 	<script src="js/datos-abiertos.js"> </script>	
 </head>
@@ -41,13 +42,11 @@
 				<div class="dnef-content-servicios">
 					<div class="btn-servicios btn-principal btn-cyan">SERVICIOS DNEF <span class="icon-arrow-bottom" style="font-size:10px"></span></div>
 					<div class="content-logo-servicios">
-						<a class="item-logo-servicio" href="https://votoinformado.jne.gob.pe/voto" target="_blank"><img src="images/voto-informado.svg" class="imgservicio"></a>
-						<a class="item-logo-servicio" href="https://observaigualdad.jne.gob.pe/" target="_blank"><img src="images/observa.svg" class="imgservicio"></a>
-						<a class="item-logo-servicio" href="https://cedie.jne.gob.pe/" target="_blank"><img src="images/cedie.svg" class="imgservicio"></a>
-						<a class="item-logo-servicio" href="https://museoelectoral.jne.gob.pe/" target="_blank"><img src="images/museo.svg" class="imgservicio"></a>			
-						<a class="item-logo-servicio" href="https://educacionvirtual.jne.gob.pe/dnef/" target="_blank"><img src="images/aula.svg" class="imgservicio"></a>
-						<a style="display: none;" class="item-logo-servicio" href="#"><img src="images/repositorio.svg" class="imgservicio"></a>						
-						<a class="item-logo-servicio" href="datos-abiertos.html" target="_blank"><img src="images/datos.svg" class="imgservicio"></a>
+						<a class="item-logo-servicio" href="https://votoinformado.jne.gob.pe/voto" target="_blank"><img src="images/voto-informado.svg" class="imgservicio"></a>						
+						<a class="item-logo-servicio" href="https://observaigualdad.jne.gob.pe/" target="_blank"><img src="images/observa.svg" class="imgservicio"></a>	<a class="item-logo-servicio" href="https://cedie.jne.gob.pe/" target="_blank"><img src="images/cedie.svg" class="imgservicio"></a>
+						<a class="item-logo-servicio"  href="https://museoelectoral.jne.gob.pe/" target="_blank"><img src="images/museo.svg" class="imgservicio"></a>
+						<a class="item-logo-servicio" href="https://educacionvirtual.jne.gob.pe/dnef/" target="_blank"><img src="images/aula.svg" class="imgservicio"></a>						
+						<a class="item-logo-servicio" href="datos-abiertos.html" target="_blank"><img src="images/datos-app.svg" class="imgservicio"></a>
 						<a class="item-logo-servicio" href="https://saednef.jne.gob.pe/" target="_blank"><img src="images/sae.svg" class="imgservicio"></a>
 					</div>
 				</div>
@@ -80,7 +79,7 @@
 		<div class="container">
 			<div class="row" ng-app="appXX" ng-controller="recursosXX">
 				<!-- FILTROS-->
-				<div class="col-lg-3">
+				<div class="col-lg-3" style="display: none">
 					<div class="content-general-filtro">
 						<div class="content-bloque-filtros">
 							<div class="titulo-bloque-filtros">TIPOS DE CONTENIDO</div>
@@ -156,11 +155,11 @@
 				</div>
 				<!-- FILTROS-->
 				<!-- DETALLE DE BUSQUEDA DE RESULTADO-->
-				<div class="col-lg-9">
+				<div class="col-lg-12">
 					<div class="dnef-titulo-bloque">Datos abiertos</div>
-					<div class="dnef-texto-resultado">Encontramos: 7570 resultados, ordenados en 757 páginas</div>
+					<div class="dnef-texto-resultado" style="display: none">Encontramos: 7570 resultados, ordenados en 757 páginas</div>
 					<!-- PAGINADOR-->
-					<div class="dnef-paginador">
+					<div class="dnef-paginador" style="display: none">
 						<ul class="dnef-content-paginador">
 							<li class="dnef-item-paginador"><span class="icon-arrow-left" style="color: #B4B2B2"></span></li>
 							<li class="dnef-item-paginador dnef-item-paginador-active">1</li>
@@ -178,7 +177,7 @@
 								<label for="" class="">¿Qué buscas?</label>
 								<div class="form-row">
 									
-									<div class="form-group col-lg-10">										
+									<div class="form-group col-lg-12">										
                          				<input id="" type="text" name="" class="form-control" placeholder="Ingrese un titulo" maxlength="" ng-model="filterText">				
 									</div>
 									<div class="form-group col-lg-2" style="display: none">
@@ -197,24 +196,36 @@
 						<div class="dnef-bloque-libro" ng-repeat="item in items = (normas | filter : {titulo: filterText}) ">
 							<div class="dnef-tituto-dato">{{item.titulo}}</div>
 							<!-- <div class="dnef-categoria-dato">Economía y finanzas - COVID 19 - Desarrollo social - Gobernabilidad</div> -->
-							<div class="dnef-categoria-dato">{{item.categoria}} - COVID 19 - Desarrollo social - Gobernabilidad</div>
+							<div class="dnef-categoria-dato">{{item.categoria}}</div>
 							<p>
 								{{item.descripcion}}
 							</p>
 							<div class="dnef-content-descargar-datos">
-								<div class="fw-500" style="margin-bottom: 15px;">Descargar:</div>
+								<div class="fw-500" style="margin-bottom: 15px;">Descargar: 										
+								</div>
 								<div class="dnef-justify-space">
 									<div class="dnef-tipo-archivo">
 										<!-- <a class="btn-descargar-archivo archivo-xls">RAR</a> -->
-										<a href="{{item.descarga}}" target="_blank" class="btn-principal">
-											Descargar
+										<a href="{{item.descarga}}" target="_blank" >
+											<img  src="documentos/datos-abiertos/Folder-Archive-zip-icon.png" style="width: 50px; height: 50px">
+											
 										</a>										
 									</div>
-									<div class="dnef-content-redes" style="margin-top: 5px">
+									<div class="dnef-content-redes" style="margin-top: 5px; display: block;">
 										<span class="fw-500" style="margin-right: 10px">Compartir:</span>
-										<a class="btn-compartir-redes"><span class="icon-whats"></span></a>
-										<a class="btn-compartir-redes compartir-twitter"><span class="icon-twitter"></span></a>
-										<a class="btn-compartir-redes compartir-facebook"><span class="icon-facebook"></span></a> 
+										<!-- <a class="btn-compartir-redes"><span class="icon-whats"></span></a> -->
+										<a class="btn-compartir-redes"  href="https://api.whatsapp.com/send?text= 
+										{{item.titulo}} - {{item.categoria}} - {{item.descripcion}}  https://dnef.jne.gob.pe/datos-abiertos.html"  data-action="share/whatsapp/share" target="_blank"><span class="icon-whats"></span></a>
+										<a class="btn-compartir-redes compartir-twitter" href="https://twitter.com/intent/tweet?text={{item.titulo}} - {{item.categoria}} https://dnef.jne.gob.pe/datos-abiertos.html " target="_blank"><span class="icon-twitter"></span></a>
+										<a class="btn-compartir-redes compartir-facebook" href="https://www.facebook.com/sharer.php?u=https://dnef.jne.gob.pe/" target="_blank"><span class="icon-facebook"></span></a> 
+										
+										<!-- <iframe src="https://www.facebook.com/plugins/share_button.php?href=https%3A%2F%2Fdevelopers.facebook.com%2Fdocs%2Fplugins%2F&layout=button_count&size=small&width=131&height=20&appId" width="131" height="20" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"></iframe> -->
+										<!-- <a href="https://web.whatsapp.com/send?text=www.google.com" data-action="share/whatsapp/share">Share via Whatsapp web</a> -->
+										<!-- <a href="https://api.whatsapp.com/send?text=www.google.com" data-action="share/whatsapp/share">Share via Whatsapp web</a> -->										
+										<!-- <a href="https://www.facebook.com/sharer.php?u=www.elcomercio.pe" target="_blank">
+											Share on Facebook
+										  </a> -->
+										  <!-- <iframe src='https://www.facebook.com/plugins/share_button.php?href=https%3A%2F%2Fwww.elcomercio.pe%2Fdocs%2Fplugins%2F&layout=button_count&size=large&width=110&height=28&appId' width='110' height='28' style={{ border: "none", overflow: "hidden" }} scrolling='no' frameborder='0' allowfullscreen='true' allow='autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share' title='fbbtn' ></iframe> -->
 									</div>
 								</div>										
 							</div>

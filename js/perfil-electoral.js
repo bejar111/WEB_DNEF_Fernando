@@ -1,17 +1,17 @@
-var ItemsXpagina=6;
+var ItemsXpagina=9;
 var nombre='inicio';
-var nro=9;
+var nro=4;
 
 $(function(){
 	nro=2;
 	console.log('Inicio ' + nombre);
 	nombre='cambio';
 
-	 $(".btn-principal").on("click", function() {
-		alert(1);
-		var tituloFiltro=$("#txtBuscarTitulo").val();
-		console.log('titulo ' + tituloFiltro);
-	  });
+	//  $(".btn-principal").on("click", function() {
+	// 	alert(1);
+	// 	var tituloFiltro=$("#txtBuscarTitulo").val();
+	// 	console.log('titulo ' + tituloFiltro);
+	//   });
 
 })
 
@@ -28,31 +28,33 @@ app.controller('recursosXX', ['$scope', 'PagerService', '$timeout', function ($s
 	//   };
 
 	$scope.normas = [
-		{anio:2020, imagen:'images/pdf.png',titulo:'Reporte Electoral 1 - ECE 2020_Perfl del Electorado',descarga:'documentos/investigacion/perfil-electoral/Reporte Electoral 1 - ECE 2020_Perfl del Electorado.pdf'},
-		{anio:2020, imagen:'images/pdf.png',titulo:'Reporte Electoral 2 - ECE2020_ Perfil de las candidaturas congresales',descarga:'documentos/investigacion/perfil-electoral/Reporte Electoral 2 - ECE2020_ Perfil de las candidaturas congresales.pdf'},
-		{anio:2020, imagen:'images/pdf.png',titulo:'Reporte Electoral 3 - ECE 2020_Inclusión en listas parlamentarias',descarga:'documentos/investigacion/perfil-electoral/Reporte Electoral 3 - ECE 2020_Inclusión en listas parlamentarias.pdf'},
-		{anio:2020, imagen:'images/pdf.png',titulo:'Reporte Electoral 4 - ECE2020 _ Participación de mujeres',descarga:'documentos/investigacion/perfil-electoral/Reporte Electoral 4 - ECE2020 _ Participación de mujeres.pdf'},
-		{anio:2020, imagen:'images/pdf.png',titulo:'Reporte Electoral 5 - ECE2020_Participación de jovenes',descarga:'documentos/investigacion/perfil-electoral/Reporte Electoral 5 - ECE2020_Participación de jovenes.pdf'},
-		{anio:2020, imagen:'images/pdf.png',titulo:'Reporte Electoral 6 - ECE2020_Resultados Encuesta a candidaturas congresales',descarga:'documentos/investigacion/perfil-electoral/Reporte Electoral 6 - ECE2020_Resultados Encuesta a candidaturas congresales.pdf'},
-		{anio:2020, imagen:'images/pdf.png',titulo:'Reporte Electoral 7 - ECE2020_Resultados y conformación del Congreso',descarga:'documentos/investigacion/perfil-electoral/Reporte Electoral 7 - ECE2020_Resultados y conformación del Congreso.pdf'},
-		{anio:2020, imagen:'images/pdf.png',titulo:'Reporte Electoral 8 - ECE2020_ Participación de personas con discapacidad',descarga:'documentos/investigacion/perfil-electoral/Reporte Electoral 8 - ECE2020_ Participación de personas con discapacidad.pdf'},
-		{anio:2020, imagen:'images/pdf.png',titulo:'Reporte electoral 9 - ECE 2020_Impacto del voto preferencial y orden de lista',descarga:'documentos/investigacion/perfil-electoral/Reporte electoral 9 - ECE 2020_Impacto del voto preferencial y orden de lista.pdf'},
-		{anio:2022, imagen:'images/pdf.png',titulo:'Perfil Electoral 1 - ERM 2022_Cambios y continuidades en las ERM',descarga:'documentos/investigacion/perfil-electoral/Perfil Electoral 1 - ERM 2022_Cambios y continuidades en las ERM.pdf'},
-		{anio:2022, imagen:'images/pdf.png',titulo:'Perfil Electoral 2 - Análisis del padrón electoral ERM 2022',descarga:'documentos/investigacion/perfil-electoral/Perfil Electoral 2 - Análisis del padrón electoral ERM 2022.pdf'},
-		{anio:2021, imagen:'images/pdf.png',titulo:'Perfil Electoral 1 - EG2021_ Electorado nacional y residentes en el extranjero',descarga:'documentos/investigacion/perfil-electoral/Perfil Electoral 1 - EG2021_ Electorado nacional y residentes en el extranjero.pdf'},
-		{anio:2021, imagen:'images/pdf.png',titulo:'Perfil Electoral 2 - EG2021_Retos de la pandemia',descarga:'documentos/investigacion/perfil-electoral/Perfil Electoral 2 - EG2021_Retos de la pandemia.pdf'},
-		{anio:2021, imagen:'images/pdf.png',titulo:'Perfil Electoral 3 - EG2021_ Elecciones internas de las OP',descarga:'documentos/investigacion/perfil-electoral/Perfil Electoral 3 - EG2021_ Elecciones internas de las OP.pdf'},
-		{anio:2021, imagen:'images/pdf.png',titulo:'Perfil Electoral 4 - EG2021_Planes de Gobierno y propuestas de partidos políticos',descarga:'documentos/investigacion/perfil-electoral/Perfil Electoral 4 - EG2021_Planes de Gobierno y propuestas de partidos políticos.pdf'},
-		{anio:2021, imagen:'images/pdf.png',titulo:'Perfil Electoral 5 - EG2021_Perfil de las candidaturas_',descarga:'documentos/investigacion/perfil-electoral/Perfil Electoral 5 - EG2021_Perfil de las candidaturas_.pdf'},
-		{anio:2021, imagen:'images/pdf.png',titulo:'Perfil Electoral 6 - EG2021_Participación política de las mujeres',descarga:'documentos/investigacion/perfil-electoral/Perfil Electoral 6 - EG2021_Participación política de las mujeres.pdf'},
-		{anio:2021, imagen:'images/pdf.png',titulo:'Perfil Electoral 7 - EG 2021_ Participación política de jóvenes',descarga:'documentos/investigacion/perfil-electoral/Perfil Electoral 7-EG 2021_ Participación política de jóvenes.pdf'},
-		{anio:2021, imagen:'images/pdf.png',titulo:'Perfil Electoral 8 - EG2021_Participación política de la población en situación de vulnerabilidad',descarga:'documentos/investigacion/perfil-electoral/Perfil Electoral 8- EG2021_Participación política de la población en situación de vulnerabilidad.pdf'},
-		{anio:2021, imagen:'images/pdf.png',titulo:'Perfil Electoral 9 - EG2021_Redes sociales en la campaña electoral',descarga:'documentos/investigacion/perfil-electoral/Perfil Electoral 9 - EG2021_Redes sociales en la campaña electoral.pdf'},
-		{anio:2021, imagen:'images/pdf.png',titulo:'Perfil Electoral 10 - EG2021_Resultados preliminares_Encuesta a Candidaturas Congresales',descarga:'documentos/investigacion/perfil-electoral/Perfil Electoral 10 - EG2021_Resultados preliminares_Encuesta a Candidaturas Congresales.pdf'},
-		{anio:2021, imagen:'images/pdf.png',titulo:'Perfil Electoral 11 - EG2021_Resultados primera vuelta electoral',descarga:'documentos/investigacion/perfil-electoral/Perfil Electoral 11 - EG2021_Resultados primera vuelta electoral.pdf'},
-		{anio:2021, imagen:'images/pdf.png',titulo:'Perfil Electoral 12 - EG2021_Monitoreo de medios en primera vuelta',descarga:'documentos/investigacion/perfil-electoral/Perfil Electoral 12 - EG2021_Monitoreo de medios en primera vuelta.pdf'},
-		{anio:2023, imagen:'images/pdf.png',titulo:'Perfil Electoral 13 - EG2_Análisis de resultados_Segunda vuelta',descarga:'documentos/investigacion/perfil-electoral/Perfil Electoral 13 - EG2021_Análisis de resultados_Segunda vuelta.pdf'},
-	];
+		{anio:'2019',imagen:'images/portadas/perfil-01.jpg',titulo:'Reporte Electoral 1: ¿Cuál es el perfil del elector peruano?',descarga:'documentos/investigacion/perfil-electoral/Reporte Electoral 1 - ECE 2020_Perfl del Electorado.pdf'},
+		{anio:'2019',imagen:'images/portadas/perfil-02.jpg',titulo:'Reporte Electoral 2: ¿Cuál es el perfil de las candidaturas congresales?',descarga:'documentos/investigacion/perfil-electoral/Reporte Electoral 2 - ECE2020_ Perfil de las candidaturas congresales.pdf'},
+		{anio:'2020',imagen:'images/portadas/perfil-03.jpg',titulo:'Reporte Electoral 3: ¿Qué tan inclusivas son las listas al parlamento?',descarga:'documentos/investigacion/perfil-electoral/Reporte Electoral 3 - ECE 2020_Inclusión en listas parlamentarias.pdf'},
+		{anio:'2020',imagen:'images/portadas/perfil-04.jpg',titulo:'Reporte Electoral 4: ¿Cuál es el rasgo distintivo de las candidatas en el Perú?',descarga:'documentos/investigacion/perfil-electoral/Reporte Electoral 4 - ECE2020 _ Participación de mujeres.pdf'},
+		{anio:'2020',imagen:'images/portadas/perfil-05.jpg',titulo:'Reporte Electoral 5: ¿Cómo ha estado representada la juventud en las listas parlamentarias?',descarga:'documentos/investigacion/perfil-electoral/Reporte Electoral 5 - ECE2020_Participación de jovenes.pdf'},
+		{anio:'2020',imagen:'images/portadas/perfil-06.jpg',titulo:'Reporte Electoral 6: Encuesta a candidaturas congresales. Resultados preliminares.',descarga:'documentos/investigacion/perfil-electoral/Reporte Electoral 6 - ECE2020_Resultados Encuesta a candidaturas congresales.pdf'},
+		{anio:'2020',imagen:'images/portadas/perfil-07.jpg',titulo:'Reporte Electoral 7: ¿Cómo se conforma el nuevo Congreso de la República?',descarga:'documentos/investigacion/perfil-electoral/Reporte Electoral 7 - ECE2020_Resultados y conformación del Congreso.pdf'},
+		{anio:'2020',imagen:'images/portadas/perfil-08.jpg',titulo:'Reporte Electoral 8: ¿Cuál es la participación de personas con discapacidad en las listas congresales?',descarga:'documentos/investigacion/perfil-electoral/Reporte Electoral 8 - ECE2020_ Participación de personas con discapacidad.pdf'},
+		{anio:'2020',imagen:'images/portadas/perfil-09.jpg',titulo:'Reporte Electoral 9: Impacto de la posición de lista y voto preferencial en las elecciones congresales (2016-2020)',descarga:'documentos/investigacion/perfil-electoral/Reporte electoral 9 - ECE 2020_Impacto del voto preferencial y orden de lista.pdf'},
+		{anio:'2022',imagen:'images/portadas/perfil-10.jpg',titulo:'Perfil Electoral 1: Cambios y continuidades en las Elecciones Regionales y Municipales',descarga:'documentos/investigacion/perfil-electoral/Perfil Electoral 1 - ERM 2022_Cambios y continuidades en las ERM.pdf'},
+		{anio:'2022',imagen:'images/portadas/perfil-11.jpg',titulo:'Perfil Electoral 2: Análisis del padrón electoral de las ERM 2022',descarga:'documentos/investigacion/perfil-electoral/Perfil Electoral 2 - Análisis del padrón electoral ERM 2022.pdf'},
+		{anio:'2022',imagen:'images/portadas/perfil_electoral_3.jpg',titulo:'Perfil Electoral 3: Paridad y alternancia en las elecciones internas ERM 2022',descarga:'documentos/investigacion/perfil-electoral/Perfil Electoral 3 - Paridad y Alternancia en las elecciones internas ERM 2022.pdf'},
+		{anio:'2021',imagen:'images/portadas/perfil-12.jpg',titulo:'Perfil Electoral 1: Electorado nacional y la nueva circunscripción de peruanos residentes en el exterior',descarga:'documentos/investigacion/perfil-electoral/Perfil Electoral 1 - EG2021_ Electorado nacional y residentes en el extranjero.pdf'},
+		{anio:'2021',imagen:'images/portadas/perfil-13.jpg',titulo:'Perfil Electoral 2: Los retos de la pandemia para la elección del bicentenario',descarga:'documentos/investigacion/perfil-electoral/Perfil Electoral 2 - EG2021_Retos de la pandemia.pdf'},
+		{anio:'2021',imagen:'images/portadas/perfil-14.jpg',titulo:'Perfil Electoral 3: Las elecciones internas de las organizaciones políticas en perspectiva',descarga:'documentos/investigacion/perfil-electoral/Perfil Electoral 3 - EG2021_ Elecciones internas de las OP.pdf'},
+		{anio:'2021',imagen:'images/portadas/perfil-15.jpg',titulo:'Perfil Electoral 4: ¿Cuáles son las propuestas de los partidos políticos para el Bicentenario de la República?',descarga:'documentos/investigacion/perfil-electoral/Perfil Electoral 4 - EG2021_Planes de Gobierno y propuestas de partidos políticos.pdf'},
+		{anio:'2021',imagen:'images/portadas/perfil-16.jpg',titulo:'Perfil Electoral 5: ¿Cuál es el perfil de las candidaturas a las EG2021?',descarga:'documentos/investigacion/perfil-electoral/Perfil Electoral 5 - EG2021_Perfil de las candidaturas_.pdf'},
+		{anio:'2021',imagen:'images/portadas/perfil-17.jpg',titulo:'Perfil Electoral 6: Participación política de las mujeres en las EG2021',descarga:'documentos/investigacion/perfil-electoral/Perfil Electoral 6 - EG2021_Participación política de las mujeres.pdf'},
+		{anio:'2021',imagen:'images/portadas/perfil-18.jpg',titulo:'Perfil Electoral 7: Participación política de candidaturas jóvenes en las EG 2021',descarga:'documentos/investigacion/perfil-electoral/Perfil Electoral 7-EG 2021_ Participación política de jóvenes.pdf'},
+		{anio:'2021',imagen:'images/portadas/perfil-19.jpg',titulo:'Perfil Electoral 8: Participación política de las poblaciones en situación de vulnerabilidad',descarga:'documentos/investigacion/perfil-electoral/Perfil Electoral 8- EG2021_Participación política de la población en situación de vulnerabilidad.pdf'},
+		{anio:'2021',imagen:'images/portadas/perfil-20.jpg',titulo:'Perfil Electoral 9: Redes sociales en la campaña electoral',descarga:'documentos/investigacion/perfil-electoral/Perfil Electoral 9 - EG2021_Redes sociales en la campaña electoral.pdf'},
+		{anio:'2021',imagen:'images/portadas/perfil-21.jpg',titulo:'Perfil Electoral 10:  Encuesta a Candidaturas Congresales 2021 -Resultados preliminares',descarga:'documentos/investigacion/perfil-electoral/Perfil Electoral 10 - EG2021_Resultados preliminares_Encuesta a Candidaturas Congresales.pdf'},
+		{anio:'2021',imagen:'images/portadas/perfil-22.jpg',titulo:'Perfil Electoral 11:  Resultados de la primera vuelta EG 2021',descarga:'documentos/investigacion/perfil-electoral/Perfil Electoral 11 - EG2021_Resultados primera vuelta electoral.pdf'},
+		{anio:'2021',imagen:'images/portadas/perfil-23.jpg',titulo:'Perfil Electoral 12: Monitoreo de medios de comunicación durante la primera vuelta de las EG 2021',descarga:'documentos/investigacion/perfil-electoral/Perfil Electoral 12 - EG2021_Monitoreo de medios en primera vuelta.pdf'},
+		{anio:'2021',imagen:'images/portadas/perfil-24.jpg',titulo:'Perfil Electoral 13: Análisis de los resultados - Segunda Elección Presidencial',descarga:'documentos/investigacion/perfil-electoral/Perfil Electoral 13 - EG2021_Análisis de resultados_Segunda vuelta.pdf'},
+
+			];
 
 	// $scope.searchText = function(item) {
 	// 	if (!$scope.query 

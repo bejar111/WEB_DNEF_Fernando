@@ -1,21 +1,11 @@
 var app = angular.module('appXX', []); app.service('PagerService', PagerService); app.controller('recursosXX', ['$scope', 'PagerService', '$timeout', function ($scope, PagerService, $timeout) { 
 
 $scope.normas = [ 
-	{imagen:'images/pdf.png',
-		titulo:'Electorado y Electores en el Perú. Aragón, Encinas, Ramírez',
-		descarga:'documentos/investigacion/publicaciones/Electorado y Electores en el Perú. Aragón, Encinas, Ramírez.pdf'},
-	{imagen:'images/pdf.png',
-		titulo:'En busca del distrito prometido. Ayala, Arriola y Cantuarias',
-		descarga:'documentos/investigacion/publicaciones/En busca del distrito prometido. Ayala, Arriola y Cantuarias.pdf'},
-	{imagen:'images/pdf.png',
-		titulo:'Perfil candidaturas subnacionales ERM2018 Ayala, Fuentes',
-		descarga:'documentos/investigacion/publicaciones/Perfil candidaturas subnacionales ERM2018 Ayala, Fuentes.pdf'},
-	{imagen:'images/pdf.png',
-		titulo:'Resumen Ejecutivo Perfil candidaturas subnacionales ERM2018. Cantuarias',
-		descarga:'documentos/investigacion/publicaciones/Resumen Ejecutivo Perfil candidaturas subnacionales ERM2018. Cantuarias.pdf'},
-	{imagen:'images/pdf.png',	
-		titulo:'Una elección extraordinaria. ECE2020 Ayala, Brou, Ponte',	
-		descarga:'documentos/investigacion/publicaciones/Una elección extraordinaria. ECE2020 Ayala, Brou, Ponte.pdf'},
+	{imagen:'images/portadas/publicaciones-01.jpg',titulo:'Electorado y Electores en el Perú. Un análisis del perfil electoral 2016',descarga:'documentos/investigacion/publicaciones/Electorado y Electores en el Perú. Aragón, Encinas, Ramírez.pdf'},
+	{imagen:'images/portadas/publicaciones-02.jpg',titulo:'En busca del distrito prometido. Participación directa y consulta vecinal en Alto Trujillo',descarga:'documentos/investigacion/publicaciones/En busca del distrito prometido. Ayala, Arriola y Cantuarias.pdf'},
+	{imagen:'images/portadas/publicaciones-03.jpg',titulo:'Perfil de las candidaturas subnacionales en el Perú. Análisis de la Encuesta a Candidatos y Candidatas en las ERM2018',descarga:'documentos/investigacion/publicaciones/Perfil candidaturas subnacionales ERM2018 Ayala, Fuentes.pdf'},
+	{imagen:'images/portadas/publicaciones-04.jpg',titulo:'Resumen Ejecutivo: Perfil de las candidaturas subnacionales en el Perú. Análisis de la Encuesta a Candidatos y Candidatas en las ERM2018',descarga:'documentos/investigacion/publicaciones/Resumen Ejecutivo Perfil candidaturas subnacionales ERM2018. Cantuarias.pdf'},
+	{imagen:'images/portadas/publicaciones-05.jpg',titulo:'Una elección extraordinaria. Análisis de las elecciones congresales de 2020',descarga:'documentos/investigacion/publicaciones/Una elección extraordinaria. ECE2020 Ayala, Brou, Ponte.pdf'},
 
 ]; 
 	$scope.pager = {}; $scope.items = []; $scope.initController = function () { $scope.setPage(1); }; 
